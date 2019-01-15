@@ -1,19 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "85899feb3f0d4c5d90bb",
-    "url": "/static/css/main.19b3b3c0.chunk.css"
+    "revision": "4fb666467264289b44a0",
+    "url": "/static/css/main.cf7a76eb.chunk.css"
   },
   {
-    "revision": "85899feb3f0d4c5d90bb",
-    "url": "/static/js/main.85899feb.chunk.js"
+    "revision": "4fb666467264289b44a0",
+    "url": "/static/js/main.4fb66646.chunk.js"
   },
   {
-    "revision": "8d01c7cfdb3e409fc6f9",
-    "url": "/static/css/1.da5a469a.chunk.css"
-  },
-  {
-    "revision": "8d01c7cfdb3e409fc6f9",
-    "url": "/static/js/1.8d01c7cf.chunk.js"
+    "revision": "8c637afb050e52f2f876",
+    "url": "/static/js/1.8c637afb.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -36,7 +32,7 @@ self.__precacheManifest = [
     "url": "/static/media/MaterialIcons-Regular.e79bfd88.eot"
   },
   {
-    "revision": "85910cf8d548849cb0e7d100c3f309d2",
+    "revision": "677d72c0eaa07b4f5f81b503b2b94950",
     "url": "/index.html"
   }
 ];
