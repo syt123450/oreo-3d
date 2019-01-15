@@ -4,7 +4,7 @@
 
 生成并导出一个3D`奥利奥`。
 
-![intro](https://raw.githack.com/syt123450/oreo-3d/master/assets/intro.png)
+<img width="100%" src="https://raw.githack.com/syt123450/oreo-3d/master/assets/intro.png">
 
 ## 功能？
 
@@ -12,15 +12,15 @@
 
 * 揉一揉`奥利奥`
 
-![rolling](https://raw.githack.com/syt123450/oreo-3d/master/assets/rolling.gif)
+<img width="100%" src="https://raw.githack.com/syt123450/oreo-3d/master/assets/rolling.gif">
 
 * `奥利奥`出现了，又消失了，再次出现了，然后又消失了。。。
 
-![zooming](https://raw.githack.com/syt123450/oreo-3d/master/assets/zoom.gif)
+<img width="100%" src="https://raw.githack.com/syt123450/oreo-3d/master/assets/zoom.gif">
 
 * 生成特别的`奥利奥`
 
-![generating](https://raw.githack.com/syt123450/oreo-3d/master/assets/generate.gif)
+<img width="100%" src="https://raw.githack.com/syt123450/oreo-3d/master/assets/generate.gif">
 
 * 打包导出3D`奥利奥`（3D场景，.gltf格式）
 
