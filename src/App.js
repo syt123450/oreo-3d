@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './assets/font/zcool.css';
-import './assets/font/material-icons.css';
+import './assets/font/material.css';
 import './App.css';
 import './assets/react-toolbox/theme.css';
 import theme from './assets/react-toolbox/theme.js';
