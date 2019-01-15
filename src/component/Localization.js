@@ -39,26 +39,20 @@ let strings = new LocalizedStrings({
 	}
 });
 
-strings.setLanguage('zh');
-
 class Localization extends Component{
 
 	state = {
 		language: 2
 	};
 
-	languages = [
-		{
-			value: 1,
-			label: 'English',
-			img: enIcon
-		},
-		{
-			value: 2,
-			label: '中文',
-			img: zhIcon
+	componentDidMount(){
+		const userLanguage = navigator.language || navigator.userLanguage;
+		if (userLanguage === "zh") {
+			this.handleLanguageChange(2);
+		} else {
+			this.handleLanguageChange(1);
 		}
-	];
+	}
 
 	handleLanguageChange = (value) => {
 		if (value === 1) {
@@ -79,6 +73,19 @@ class Localization extends Component{
 
 	render(){
 
+		const languages = [
+			{
+				value: 1,
+				label: 'English',
+				img: enIcon
+			},
+			{
+				value: 2,
+				label: '中文',
+				img: zhIcon
+			}
+		];
+
 		const customItem = function (item) {
 			return (
 				<div className={"selector-item"}>
@@ -96,7 +103,7 @@ class Localization extends Component{
 			<div className={"language-selector"}>
 				<Dropdown
 					auto={false}
-					source={this.languages}
+					source={languages}
 					onChange={this.handleLanguageChange}
 					template={customItem}
 					value={this.state.language}
