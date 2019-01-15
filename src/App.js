@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './assets/font/zcool.css';
+import './assets/font/material-icons.css';
 import './App.css';
 import './assets/react-toolbox/theme.css';
-import 'material-design-icons/iconfont/material-icons.css';
 import theme from './assets/react-toolbox/theme.js';
 import ThemeProvider from 'react-toolbox/lib/ThemeProvider';
 import Scene from './component/Scene';
@@ -30,7 +30,7 @@ class App extends Component {
         return (
             <ThemeProvider theme={theme}>
                 <div className="App">
-                    <GithubCorner href="https://github.com/username/repo"
+                    <GithubCorner href="https://github.com/syt123450/oreo-3d"
                             size={100}
                             bannerColor={"#FC4482"}/>
                     <Localization refreshComponents={this.refreshComponents}/>
