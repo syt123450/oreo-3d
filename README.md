@@ -6,7 +6,7 @@
 
 ## 功能？
 
-这个`奥利奥`生成器有不少 <b>实~~沙~~ 用~~雕~~</b> 的功能
+这个`奥利奥`生成器有不少 <b>实（~~沙~~） 用（~~雕~~）</b> 的功能
 
 * 揉一揉`奥利奥`
 
@@ -46,13 +46,22 @@ http://localhost:3000/
 
 ## 实现简介
 
-主要技术栈：
+主要实现过程：
 
 * Three.js 3D 场景创建
-* React 粘合剂
-* create-react-app 脚手架创建
-* react-toolbox UI 组件
-* react-localization 多语言
+
+    * 3D 雾化场景增加镜深感
+    * 添加平板作为地面接受反光
+    * 使用`冯氏材质`提升光感
+    * 创建`饼干`对象与`夹心`对象以复用
+    * STL Loader 加载模型素材
+    * GLTF Exporter 导出可复用场景
+
+* React 项目粘合剂
+
+    * create-react-app 脚手架创建
+    * react-toolbox UI 组件
+    * react-localization 多语言
 
 ## 引用
 
