@@ -1,0 +1,24 @@
+.language-selector {
+    position: fixed;
+    left: 30px;
+    top: 150px;
+    width: 120px;
+}
+
+.selector-item {
+    display: flex;
+    flex-direction: row
+}
+
+.selector-item-image {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    background-color: #ccc
+}
+
+.selector-item-content {
+    line-height: 32px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}

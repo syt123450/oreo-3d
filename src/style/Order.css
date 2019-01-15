@@ -1,0 +1,77 @@
+.order-button {
+    position: fixed;
+    width: 120px;
+    /*height: 30px;*/
+    left: 30px;
+    top: 50px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+p.menu-title {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.order-dialog {
+    width: 400px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.order-dialog nav {
+    background-color: #ededed;
+    margin-top: 10px;
+}
+
+.submit-order {
+    width: 100px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    background-color: #fff;
+    margin-right: 50px;
+}
+
+.cancel-order {
+    width: 100px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    background-color: #fff;
+    margin-right: 65px;
+}
+
+.add-icon {
+    cursor: pointer;
+}
+
+.remove-icon {
+    cursor: pointer;
+}
+
+.menu-result {
+    margin-top: 30px;
+}
+
+.menu-result label {
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.menu-result input {
+    font-size: 30px;
+    text-align: center!important;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.menu-item {
+    width: 35%;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.add-item-name {
+    margin-left: 20%;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.sub-item-name {
+    margin-left: 15%;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
