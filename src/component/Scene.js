@@ -120,11 +120,11 @@ class Scene extends Component{
 		for ( let i = 0; i < contentList.length; i ++ ) {
 			let content = contentList[ contentList.length - 1 - i ];
 			if (content === 1) {
-				bottom = this.createO(i, bottom);
+				bottom = this.createO(bottom, i, contentList.length);
 			} else if (content === 2) {
-				bottom = this.createRe(i, bottom);
+				bottom = this.createRe(bottom);
 			} else if (content === 3) {
-				bottom = this.createAnd(i, bottom);
+				bottom = this.createAnd(bottom);
 			}
 		}
 
@@ -142,14 +142,14 @@ class Scene extends Component{
 
 	};
 
-	createO = (index, bottom) => {
+	createO = (bottom, index, depth) => {
 
 		let o1 = this.oMesh.clone();
 
 		o1.position.set( 0, bottom, 0 );
 
 		let rotation;
-		if (index === 0) {
+		if (index === 0 && depth !== 1) {
 			rotation = Math.PI / 2;
 		} else {
 			rotation = - Math.PI / 2;
@@ -172,7 +172,7 @@ class Scene extends Component{
 
 	};
 
-	createRe = (index, bottom) => {
+	createRe = (bottom) => {
 
 		let re1 = this.reMesh.clone();
 		re1.position.set(0, bottom + 0.05, 0);
@@ -186,7 +186,7 @@ class Scene extends Component{
 
 	};
 
-	createAnd = (index, bottom) => {
+	createAnd = (bottom) => {
 
 		bottom += 0.1;
 
