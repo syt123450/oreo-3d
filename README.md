@@ -4,6 +4,8 @@
 
 生成并导出一个3D`奥利奥`。
 
+![intro](https://raw.githack.com/syt123450/oreo-3d/master/assets/intro.png)
+
 ## 功能？
 
 这个`奥利奥`生成器有不少 <b>实（~~沙~~） 用（~~雕~~）</b> 的功能
