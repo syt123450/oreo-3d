@@ -7,16 +7,19 @@ import { strings } from "./Localization";
 class Exporter extends Component{
 
 	exportScene = ()=> {
+
 		let exportedScene = this.props.scene.current.scene;
-		var gltfExporter = new GLTFExporter();
+		let gltfExporter = new GLTFExporter();
 
 		gltfExporter.parse( exportedScene, function ( result ) {
 
-			var output = JSON.stringify( result, null, 2 );
+			let output = JSON.stringify( result, null, 2 );
+			let link = document.createElement( 'a' );
 
-			var link = document.createElement( 'a' );
 			link.style.display = 'none';
+
 			document.body.appendChild( link );
+
 			link.href = window.URL.createObjectURL( new Blob( [ output ], { type: 'text/plain' } ) );
 			link.download = 'oreo.gltf';
 			link.click();
@@ -25,7 +28,9 @@ class Exporter extends Component{
 	};
 
 	refresh = () => {
+
 		this.setState({});
+
 	};
 
 	render(){

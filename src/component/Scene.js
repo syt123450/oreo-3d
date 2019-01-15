@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import '../style/Scene.css';
 import * as THREE from 'three';
-var STLLoader = require('three-stl-loader')(THREE);
-var TrackballControls = require('three-trackballcontrols');
+let STLLoader = require('three-stl-loader')(THREE);
+let TrackballControls = require('three-trackballcontrols');
 
 class Scene extends Component{
 
 	componentDidMount(){
+
 		const width = this.mount.clientWidth;
 		const height = this.mount.clientHeight;
-		//ADD SCENE
+
 		this.scene = new THREE.Scene();
 		this.scene.background = new THREE.Color( 0x72645b );
 		this.scene.fog = new THREE.Fog( 0x72645b, 2, 15 );
-		//ADD CAMERA
+
 		this.camera = new THREE.PerspectiveCamera(
 			35,
 			width / height,
@@ -22,16 +23,14 @@ class Scene extends Component{
 		);
 		this.camera.position.set( 0, 3, 3 );
 		this.camera.lookAt(new THREE.Vector3( 0, 0, 0 ));
-		//ADD RENDERER
 		this.renderer = new THREE.WebGLRenderer({ antialias: true });
 		this.renderer.gammaInput = true;
 		this.renderer.gammaOutput = true;
 		this.renderer.shadowMap.enabled = true;
-		// this.renderer.setClearColor('#72645b');
 		this.renderer.setSize(width, height);
 		this.mount.appendChild(this.renderer.domElement);
 
-		var plane = new THREE.Mesh(
+		let plane = new THREE.Mesh(
 			new THREE.PlaneBufferGeometry( 40, 40 ),
 			new THREE.MeshPhongMaterial( { color: 0x999999, specular: 0x101010 } )
 		);
@@ -46,14 +45,14 @@ class Scene extends Component{
 		this.addShadowedLight( 0, 1, -0.5, 0xffaa00, 1 );
 		this.addShadowedLight( 0, -1, -0.5, 0xffaa00, 1 );
 
-		var reGeometry = new THREE.CylinderBufferGeometry( 0.8, 0.8, 0.1, 32 );
-		var reMaterial = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0x111111, shininess: 200 } );
+		let reGeometry = new THREE.CylinderBufferGeometry( 0.8, 0.8, 0.1, 32 );
+		let reMaterial = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0x111111, shininess: 200 } );
 		this.reMesh = new THREE.Mesh( reGeometry, reMaterial );
 
 		this.ingredients = [];
 
-		var loader = new STLLoader();
-		var material = new THREE.MeshPhongMaterial( { color: 0x000000, specular: 0x111111, shininess: 200 } );
+		let loader = new STLLoader();
+		let material = new THREE.MeshPhongMaterial( { color: 0x000000, specular: 0x111111, shininess: 200 } );
 		loader.load( './model/oreo_fixed.stl', function ( geometry ) {
 
 			this.oMesh = new THREE.Mesh( geometry, material );
@@ -66,27 +65,25 @@ class Scene extends Component{
 		this.controls.rotateSpeed = 1.0;
 		this.controls.zoomSpeed = 1.2;
 		this.controls.panSpeed = 0.8;
-
 		this.controls.noZoom = false;
 		this.controls.noPan = false;
-
 		this.controls.staticMoving = true;
 		this.controls.dynamicDampingFactor = 0.3;
-
 		this.controls.keys = [ 65, 83, 68 ];
-
 		this.controls.addEventListener( 'change', this.render );
-
-		this.animate();
 
 		window.addEventListener( 'resize', this.onWindowResize, false );
 
+		this.animate();
+
 	}
+
 	animate = () => {
 		window.requestAnimationFrame(this.animate);
 		this.renderScene();
 		this.controls.update();
 	};
+
 	renderScene = () => {
 		this.renderer.render(this.scene, this.camera)
 	};
@@ -98,11 +95,11 @@ class Scene extends Component{
 	};
 
 	addShadowedLight = ( x, y, z, color, intensity ) => {
-		var directionalLight = new THREE.DirectionalLight( color, intensity );
+		let directionalLight = new THREE.DirectionalLight( color, intensity );
 		directionalLight.position.set( x, y, z );
 		this.scene.add( directionalLight );
 		directionalLight.castShadow = true;
-		var d = 1;
+		let d = 1;
 		directionalLight.shadow.camera.left = - d;
 		directionalLight.shadow.camera.right = d;
 		directionalLight.shadow.camera.top = d;
@@ -146,6 +143,7 @@ class Scene extends Component{
 	};
 
 	createO = (index, bottom) => {
+
 		let o1 = this.oMesh.clone();
 
 		o1.position.set( 0, bottom, 0 );
@@ -171,9 +169,11 @@ class Scene extends Component{
 		}
 
 		return bottom;
+
 	};
 
 	createRe = (index, bottom) => {
+
 		let re1 = this.reMesh.clone();
 		re1.position.set(0, bottom + 0.05, 0);
 		this.scene.add( re1 );
@@ -183,16 +183,15 @@ class Scene extends Component{
 		bottom += 0.101;
 
 		return bottom;
+
 	};
 
 	createAnd = (index, bottom) => {
+
 		bottom += 0.1;
 
 		return bottom;
-	};
 
-	printTest = () => {
-		console.log("test");
 	};
 
 	render(){

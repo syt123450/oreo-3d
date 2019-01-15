@@ -8,10 +8,6 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: 'ZCOOL KuaiLe', cursive;
-}
-
 #root {
   height: 100%;
   width: 100%;
