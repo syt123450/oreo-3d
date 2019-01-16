@@ -22,3 +22,18 @@
     line-height: 32px;
     font-family: 'ZCOOL KuaiLe', cursive;
 }
+
+@media (max-width: 500px) {
+    .language-selector {
+        top: 90px;
+        width: 90px;
+    }
+
+    .selector-item-image {
+        display: none;
+    }
+
+    .selector-item-content {
+        padding-left: 5px;
+    }
+}

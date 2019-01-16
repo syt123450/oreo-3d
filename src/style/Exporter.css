@@ -6,3 +6,14 @@
     color: #1b9a59;
     font-family: 'ZCOOL KuaiLe', cursive;
 }
+
+@media (max-width: 500px) {
+    .exporter-button {
+        top: 60px;
+        width: 80px;
+    }
+
+    .exporter-button span {
+        display: none!important;
+    }
+}

@@ -74,3 +74,30 @@ p.menu-title {
     margin-left: 15%;
     font-family: 'ZCOOL KuaiLe', cursive;
 }
+
+
+@media (max-width: 500px) {
+
+    .order-button {
+        top: 10px;
+        width: 80px;
+    }
+
+    .order-button span {
+        display: none!important;
+    }
+
+    .add-item-name {
+        margin-left: 5px!important;
+    }
+
+    .sub-item-name {
+        margin-left: 0!important;
+    }
+
+    .submit-order, .cancel-order {
+        width: 30%;
+        margin-right: 12%;
+    }
+
+}
