@@ -10,6 +10,7 @@
     "react-toolbox-themr": "^1.0.2",
     "react-localization": "^1.0.13",
     "react-github-corner": "^2.3.0",
+    "react-meta-tags": "^0.7.3",
     "three": "^0.100.0",
     "three-stl-loader": "^1.0.6",
     "three-trackballcontrols": "^0.0.7",

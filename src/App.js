@@ -10,6 +10,7 @@ import Exporter from './component/Exporter';
 import Order from './component/Order';
 import { Localization } from "./component/Localization";
 import GithubCorner from 'react-github-corner';
+import Metas from './component/Meta';
 
 class App extends Component {
 
@@ -30,6 +31,7 @@ class App extends Component {
         return (
             <ThemeProvider theme={theme}>
                 <div className="App">
+                    <Metas/>
                     <GithubCorner href="https://github.com/syt123450/oreo-3d"
                             size={100}
                             bannerColor={"#FC4482"}/>
