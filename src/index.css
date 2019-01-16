@@ -6,6 +6,7 @@ html, body {
   font-family: 'ZCOOL KuaiLe', cursive!important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  touch-action: none;
 }
 
 #root {
