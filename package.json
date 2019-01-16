@@ -15,7 +15,8 @@
     "three-stl-loader": "^1.0.6",
     "three-trackballcontrols": "^0.0.7",
     "three-gltf-exporter": "^0.0.1",
-    "material-design-icons": "^3.0.1"
+    "material-design-icons": "^3.0.1",
+    "gh-pages": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
